@@ -8,6 +8,7 @@ import Header from './components/header/header.component'
 import SignInAndSignUpPage from './pages/sign-in-and-sign-up/sign-in-and-sign-up.component'
 import { auth } from './firebase/firebase.utils'
 
+
 const HatsPage = () =>
 (
   <div>
@@ -40,8 +41,8 @@ class App extends React.Component{
     render(){
         return (
           <div>
-            <Header/>
-            <Switch>
+            <Header  currentUser = {this.state.currentUser}/>
+            <Switch> 
                 <Route exact path='/' component={HomePage}></Route>
                 <Route exact path='/hats' component={HatsPage}></Route>
                 <Route exact path='/shop' component={ShopPage}></Route>
