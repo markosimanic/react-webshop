@@ -43,9 +43,9 @@ class Directory extends React.Component {
                   linkUrl : ''
                 }
               ]
-        }     
+        }
     }
-
+    
     render(){
         return (
             <div className='directory-menu'>
@@ -53,10 +53,12 @@ class Directory extends React.Component {
                     this.state.sections.map(({ id, ...otherSectionProps }) => (
                         <MenuItem key={id} {...otherSectionProps}/>
                     ))
+
+                
                 }
             </div>
         )
     }
-}  
+}
 
 export default Directory;
