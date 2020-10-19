@@ -5,7 +5,7 @@ import { ReactComponent as Logo} from '../../assets/4.3 crown.svg'
 import { auth } from '../../firebase/firebase.utils'
 
 import './header.styles.scss'
-
+                //this currentUser value comes from reducer
 const Header = ({currentUser}) => (
     <div className='header'>
         <Link className='logo-container' to="/">
@@ -23,7 +23,9 @@ const Header = ({currentUser}) => (
         </div>
     </div>
 )
+                        //this state is rootReducer
 const mapStateToProps = state => ({
+              //state from rootReducer is user -> state.user, its value is userReducer which have currentUser
     currentUser: state.user.currentUser
   });
   
