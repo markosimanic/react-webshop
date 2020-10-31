@@ -1,4 +1,5 @@
 export const addItemToCart = (cartItems, cartItemToAdd) => {
+    //if found, find sets found cartItem to our const, if it does not find anything, const is null
     const existingCartItem = cartItems.find(
         cartItem => cartItem.id === cartItemToAdd.id
     );
@@ -6,7 +7,9 @@ export const addItemToCart = (cartItems, cartItemToAdd) => {
     if (existingCartItem){
         return cartItems.map(
             cartItem => cartItem.id === cartItemToAdd.id 
-                ? {...cartItem, quantity: cartItem.quantity+1 } 
+                //if we already have cartItem in our cart, just add 1 to its quantity
+                ? {...cartItem, quantity: cartItem.quantity + 1 } 
+                //if its new cart item, pass it in cart without adding 1
                 : cartItem 
             )
     }
