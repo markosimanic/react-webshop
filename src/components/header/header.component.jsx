@@ -32,7 +32,7 @@ const Header = ({currentUser,hidden}) => (
 )
                         //this state is rootReducer
 const mapStateToProps = ({user:{currentUser}, cart: {hidden}}) => ({
-              //state from rootReducer is user -> state.user, its value is userReducer which have currentUser
+              //state from rootReducer is user -> state.user returns its value -> userReducer which have currentUser in its state 
     currentUser,
     hidden
   });
