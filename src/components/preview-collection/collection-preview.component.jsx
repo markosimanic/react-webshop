@@ -9,7 +9,7 @@ import CollectionItem from '../collection-item/collection-item.component'
 // {title, items} - these parameters must have same name as attributes of ...otherCollectionProps
 // {title, items} -actually these are parameters which this component accepts from shop component.
 // items is list of items of some category
-const CollectionPreview = ({title, items}) => (
+const CollectionPreview = ({title, items}) =>(
     <div className='collection-preview'>
         <h1 className='title'>{title.toUpperCase()}</h1>
         <div className='preview'>
@@ -19,8 +19,7 @@ const CollectionPreview = ({title, items}) => (
                     <CollectionItem key={item.id} item={item} />
             ))}
         </div>
-    </div>
-    
+    </div>  
 )
 
-export default CollectionPreview;
+export default CollectionPreview
